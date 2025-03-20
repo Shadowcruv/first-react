@@ -47,7 +47,9 @@ import Header from './Header'
 // }
 
 function App(){
-  <Header />
+  return (
+    <Header />
+  )
 }
 
 export default App;

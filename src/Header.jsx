@@ -15,8 +15,8 @@
 
 export default function Header(){
   return (
-    <header className="travel">
-      <img src="./assets/react.svg" alt="React logo" className="logoo" />
+    <header className="travel-header">
+      <img src="src/assets/react.svg" className="logoo" />
       <span>my travel journal.</span>
     </header>
   )

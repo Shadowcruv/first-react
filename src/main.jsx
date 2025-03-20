@@ -1,11 +1,12 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 //below are the 3 different ways i know you can import something from an export default function in React
-import Header from './Header.jsx'
+// import Header from './Header.jsx'
 import Big from './MainContent'
 import Bottom from './Footer.jsx'
 import './index.css'
 import App from './App.jsx'
+// import Appr from './Appr.jsx'
 
 
 // createRoot(document.getElementById('root')).render(
