@@ -34,6 +34,31 @@ a:hover {
   color: white */
 /* } */
 
+/* 
+.add-ingredient-form {
+  display: flex;
+  justify-content: center
+  align-items: center
+
+}
+
+.add-ingredient-form > input {
+  flex-grow : 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  min-width: 150px;
+  max-width: 400px;
+
+  nowrap
+}
+
+.add-ingredient-form > button::before {
+content: "+",
+margin-right: 5px
+
+
+}
+*/
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

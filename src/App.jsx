@@ -51,6 +51,10 @@ import data from './data'
 
 //for travel journal(Entry.jsx)
 export default function App(){
+
+  function handleClick(){
+    console.log("I was clicked")
+  }
   
   // const entryComponentList = [
   //   <Entry
@@ -116,6 +120,7 @@ export default function App(){
     <>
       <Header />
       {entryDataComponentList}
+      <button onClick={handleClick}>Click me</button>
     </>
     
   )
