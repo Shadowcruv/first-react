@@ -5,17 +5,17 @@ export default function Entry(props){
   return(
     <div className="main-content">
       <div className="mainContent-image-container">
-        <img src={props.img.src} className="mainContent-image" alt="Sky"/>
+        <img src={props.dto.img.src} className="mainContent-image" alt="Sky"/>
       </div>
       <div >
         <div className="upper-content">
           <img src='src/assets/react.svg' className="content-subImage" alt="react"/>
-          <h6>{props.city}</h6>
+          <h6>{props.dto.city}</h6>
           <a href="www.app.com">View on Google Maps</a>
         </div>
-        <h1 className="Mount-Fuji">{props.title}</h1>
-        <p className="date">{props.date}</p>
-        <p className="mount-text">{props.description}</p>
+        <h1 className="Mount-Fuji">{props.dto.title}</h1>
+        <p className="date">12 Jan 2021-24 Jan, 2021</p>
+        <p className="mount-text">{props.dto.description}</p>
       </div>
   </div>
   );

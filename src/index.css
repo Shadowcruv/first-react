@@ -132,6 +132,7 @@ span{
 
 .main-content{
   display: flex;
+  margin-top: 10px;
   /* background-color: #ffffff; */
 
 }
