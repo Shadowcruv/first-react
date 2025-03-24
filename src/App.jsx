@@ -105,6 +105,7 @@ export default function App(){
   ]
 
   const entryDataComponentList = data.map((travelObject) => {
+    console.log(travelObject.img)
     return <Entry 
               img={travelObject.img}
               city={travelObject.city}

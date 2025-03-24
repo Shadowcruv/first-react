@@ -1,11 +1,11 @@
 // using props, n.b: it could be called any name of your choice but most people name it props
 
 export default function Entry(props){
-  console.log(props.img.src)
+  // console.log(props.img)
   return(
     <div className="main-content">
       <div className="mainContent-image-container">
-        <img src={props.img} className="mainContent-image" alt="Sky"/>
+        <img src={props.img.src} className="mainContent-image" alt="Sky"/>
       </div>
       <div >
         <div className="upper-content">
