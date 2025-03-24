@@ -52,62 +52,63 @@ import data from './data'
 //for travel journal(Entry.jsx)
 export default function App(){
   
-  const entryComponentList = [
-    <Entry
-        img={
-            {
-              src:"src/image/sky.webp",
-              alt:"Sky Cloud"
-            }
-          }
-        city="Japan"
-        title="Mount Fuji"
-        date="12 Jan 2021-24 Jan, 2021"
-        description="Mount Fuji is the tallest mountain in Japan,standing at 3,776 meters (12,389 feet). Mount Fuji..."
+  // const entryComponentList = [
+  //   <Entry
+  //       img={
+  //           {
+  //             src:"src/image/sky.webp",
+  //             alt:"Sky Cloud"
+  //           }
+  //         }
+  //       city="Japan"
+  //       title="Mount Fuji"
+  //       date="12 Jan 2021-24 Jan, 2021"
+  //       description="Mount Fuji is the tallest mountain in Japan,standing at 3,776 meters (12,389 feet). Mount Fuji..."
         
-      />,
-      <Entry 
-        img={
-          {
-            src:"src/image/sky.webp",
-            alt:"Sky Cloud"
-          }
-        }
-        city="Japan"
-        title="Mount Everest"
-        date="14 Feb 2021-24 Jan, 2021"
-        description="Mount Everest is the tallest mountain in Japan,standing at 3,776 meters (12,389 feet). Mount Fuji..."
-      />,
-      <Entry
-        img={
-          {
-            src:"src/image/sky.webp",
-            alt:"Sky Cloud"
-          }
-        }
-        city="Japan"
-        title="Mount Island"
-        date="12 Jan 2021-24 Jan, 2021"
-        description="Mount Fuji is the tallest mountain in Japan,standing at 3,776 meters (12,389 feet). Mount Fuji..."
-      />,
-      <Entry 
-        img={
-          {
-            src:"src/image/sky.webp",
-            alt:"Sky Cloud"
-          }
-        }
-        city="Japan"
-        title="Mount Jordan"
-        date="12 Jan 2021-24 Jan, 2021"
-        description="Mount Fuji is the tallest mountain in Japan,standing at 3,776 meters (12,389 feet). Mount Fuji..."
-      />
-  ]
+  //     />,
+  //     <Entry 
+  //       img={
+  //         {
+  //           src:"src/image/sky.webp",
+  //           alt:"Sky Cloud"
+  //         }
+  //       }
+  //       city="Japan"
+  //       title="Mount Everest"
+  //       date="14 Feb 2021-24 Jan, 2021"
+  //       description="Mount Everest is the tallest mountain in Japan,standing at 3,776 meters (12,389 feet). Mount Fuji..."
+  //     />,
+  //     <Entry
+  //       img={
+  //         {
+  //           src:"src/image/sky.webp",
+  //           alt:"Sky Cloud"
+  //         }
+  //       }
+  //       city="Japan"
+  //       title="Mount Island"
+  //       date="12 Jan 2021-24 Jan, 2021"
+  //       description="Mount Fuji is the tallest mountain in Japan,standing at 3,776 meters (12,389 feet). Mount Fuji..."
+  //     />,
+  //     <Entry 
+  //       img={
+  //         {
+  //           src:"src/image/sky.webp",
+  //           alt:"Sky Cloud"
+  //         }
+  //       }
+  //       city="Japan"
+  //       title="Mount Jordan"
+  //       date="12 Jan 2021-24 Jan, 2021"
+  //       description="Mount Fuji is the tallest mountain in Japan,standing at 3,776 meters (12,389 feet). Mount Fuji..."
+  //     />
+  // ]
 
   const entryDataComponentList = data.map((travelObject) => {
     
+    //now let's use spread operator which is optimizable too as react will create each property of the object for us before rendering instead of us creating it. {...travelObject}
     return <Entry 
-              dto={travelObject}
+              {...travelObject}
             />
   })
 
