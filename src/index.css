@@ -73,7 +73,7 @@ button:focus-visible {
 }
 
 body{
-  background-color: #242424;
+  background-color: #ffffff;
 }
 
 .header{
@@ -82,7 +82,7 @@ body{
 }
 
 .logo{
-  width: 55px;
+  width: 25px;
 }
 
 .nav-list{
@@ -100,6 +100,8 @@ body{
   font-size: 1.5rem;
 }
 
+
+
 mainn {
   background-image: url(/images/react-logo.png);
   background-repeat: no-repeat;
@@ -114,11 +116,11 @@ mainn {
 .travel-header{
   display: flex;
   justify-content: center;
-  background-color: red;
+  background-color: rgb(197, 58, 58);
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   align-items: center;
-
+  margin-bottom: 30px;
 }
 
 
@@ -128,6 +130,64 @@ span{
   color: white
 }
 
+.main-content{
+  display: flex;
+  /* background-color: #ffffff; */
+
+}
+
+.main-content > div {
+  
+  margin-right: 20px
+}
+
+.mainContent-image-container {
+  height: 200px;
+  width: 250px;
+  overflow: hidden;
+  border-radius: 5%;
+}
+
+.mainContent-image {
+  height: 100%;
+  width: 100%;
+  
+}
 
 
+.content-subImage{
+  width: 50px;
+  height: 50px;
+}
+
+a{
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
+
+.upper-content{
+  display: flex;
+  align-items: start;
+  box-sizing: border-box;
+}
+
+.Mount-Fuji{
+  font-size: 2.5rem
+}
+
+.date{
+  font-weight: bold;
+}
+
+.content-subImage{
+  width: 25px;
+  height: 25px;
+}
+
+h6{
+  margin: 0;
+  font-size: 1.3rem;
+  margin-left: 10px;
+}
 

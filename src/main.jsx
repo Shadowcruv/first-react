@@ -76,11 +76,21 @@ root.render(
 
 
 function Page(){
+
+  const hours = new Date().getHours();
+  let timeOfDay;
+  if(timeOfDay < 12){
+    timeOfDay = "morning"
+  } else {
+    timeOfDay = "night"
+  }
+
   return (
     <>
-      <Header />
+      {/* <Header />
       <Big />
-      <Bottom />
+      <Bottom /> */}
+      <h1>Good {timeOfDay}</h1>
     
     </>
   )
