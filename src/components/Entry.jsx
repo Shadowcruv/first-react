@@ -5,7 +5,7 @@ export default function Entry(props){
   return(
     <div className="main-content">
       <div className="mainContent-image-container">
-        <img src={props.img.src} className="mainContent-image" alt="Sky"/>
+        <img src={props.img.src} className="mainContent-image" onMouseOver={() => console.log("This was hovered on")} alt="Sky"/>
       </div>
       <div >
         <div className="upper-content">
