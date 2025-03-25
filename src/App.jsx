@@ -8,6 +8,7 @@ import Header from './components/Header'
 import Entry from './components/Entry'
 import Joke from './components/Joke'
 import data from './data'
+import MainChef from './components/MainChef'
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -119,8 +120,7 @@ export default function App(){
   return (
     <>
       <Header />
-      {entryDataComponentList}
-      <button onClick={handleClick}>Click me</button>
+      <MainChef />
     </>
     
   )

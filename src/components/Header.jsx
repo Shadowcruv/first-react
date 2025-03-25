@@ -15,9 +15,9 @@
 
 export default function Header(){
   return (
-    <header className="travel-header">
-      <img src="src/assets/react.svg" className="logoo" />
-      <span>my travel journal.</span>
+    <header className="chef-claude">
+      <img src="src/assets/react.svg" className="chef-logo" />
+      <span>Chef Claude</span>
     </header>
   )
 }
