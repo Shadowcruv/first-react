@@ -3,10 +3,17 @@ import React from "react"
 
 export default function MainChef(){
 
-  // we just destructed the array we got from React.useState("big")
-  const [result, theFunction] = React.useState("big");
-  //to get the value for result only since the useStateFunction returns an
-  console.log(result)
+  const [option, setOption] = React.useState(0)
+
+  
+  function handleClick(){
+
+    setOption(handleCall);
+  }
+
+  function handleCall(any){
+    return any + 1
+  }
 
   const ingredients = ["Pepper", "Salt", "Maggi"]
 
@@ -44,7 +51,7 @@ export default function MainChef(){
           />
           <button>Add ingredient</button>
         </form>
-        <button className="testButton">YES</button>
+        <button className="testButton" onClick={() => {setOption(handleCall)}}>{option}</button>
         <ul>
           {/* {ingredientsElement} */}
         </ul>
