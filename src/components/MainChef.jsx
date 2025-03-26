@@ -7,13 +7,7 @@ export default function MainChef(){
 
   
   function handleClick(){
-    setIsGoingOut(() => {
-      if(isGoingOut){
-        return false
-      } else{
-        return true
-      }
-    })
+    setIsGoingOut( prev => !prev)
   }
 
   const ingredients = ["Pepper", "Salt", "Maggi"]
