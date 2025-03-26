@@ -3,9 +3,10 @@ import React from "react"
 
 export default function MainChef(){
 
-  const result = React.useState("big");
-  //to get the value for result only since the useStateFunction returns an array
-  console.log(result[0])
+  // we just destructed the array we got from React.useState("big")
+  const [result, theFunction] = React.useState("big");
+  //to get the value for result only since the useStateFunction returns an
+  console.log(result)
 
   const ingredients = ["Pepper", "Salt", "Maggi"]
 
