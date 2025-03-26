@@ -3,16 +3,17 @@ import React from "react"
 
 export default function MainChef(){
 
-  const [option, setOption] = React.useState(0)
+  const [isGoingOut, setIsGoingOut] = React.useState(true)
 
   
   function handleClick(){
-
-    setOption(handleCall);
-  }
-
-  function handleCall(any){
-    return any + 1
+    setIsGoingOut(() => {
+      if(isGoingOut){
+        return false
+      } else{
+        return true
+      }
+    })
   }
 
   const ingredients = ["Pepper", "Salt", "Maggi"]
@@ -51,7 +52,7 @@ export default function MainChef(){
           />
           <button>Add ingredient</button>
         </form>
-        <button className="testButton" onClick={() => {setOption(handleCall)}}>{option}</button>
+        <button className="testButton" onClick={handleClick}>{isGoingOut ? "YES" : "NO"}</button>
         <ul>
           {/* {ingredientsElement} */}
         </ul>
