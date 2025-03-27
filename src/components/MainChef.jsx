@@ -3,18 +3,15 @@ import React from "react"
 
 export default function MainChef(){
 
-  const [isGoingOut, setIsGoingOut] = React.useState(true)
+  const ingredients = ["Pepper", "CrayFish", "Maggi"]
+
+  const [ingredientList, setIngredientList] = React.useState([...ingredients])
+
+
 
   
-  function handleClick(){
-    setIsGoingOut( prev => !prev)
-  }
 
-  const ingredients = ["Pepper", "Salt", "Maggi"]
-
-  const ingredientsElement = ingredients.map((element) => 
-    <li key={element}>{element}</li>
-  )
+  const ingredientsElement = ingredientList.map(ingredient => <li key={ingredient}>{ingredient}</li>)
 
   //you can use this if you wanted to include return statement explicitly
 
@@ -29,6 +26,8 @@ export default function MainChef(){
     //to get the text in the input box in the form
     const formData = new FormData(event.currentTarget);
     const newIngredient = formData.get("ingredient");
+
+    setIngredientList(prevList => [...prevList, newIngredient])
 
     console.log(newIngredient);
   }
@@ -46,9 +45,9 @@ export default function MainChef(){
           />
           <button>Add ingredient</button>
         </form>
-        <button className="testButton" onClick={handleClick}>{isGoingOut ? "YES" : "NO"}</button>
+        
         <ul>
-          {/* {ingredientsElement} */}
+          {ingredientsElement}
         </ul>
       </section>
     </>
