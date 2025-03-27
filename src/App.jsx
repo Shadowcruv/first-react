@@ -9,6 +9,7 @@ import Entry from './components/Entry'
 import Joke from './components/Joke'
 import data from './data'
 import MainChef from './components/MainChef'
+import Form from './components/Form'
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -120,7 +121,8 @@ export default function App(){
   return (
     <>
       <Header />
-      <MainChef />
+      <Form />
+      {/* <MainChef /> */}
     </>
     
   )
