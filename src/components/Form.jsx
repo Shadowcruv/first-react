@@ -76,7 +76,7 @@
 
         <label htmlFor="favColor">What is your favorite color?</label>
         <br />
-        <select disabled id="favColor" name="favColor">
+        <select required id="favColor" name="favColor">
           <option value="">--Choose a color--</option>
           <option value="red">Red</option>
           <option value="orange">Orange</option>
