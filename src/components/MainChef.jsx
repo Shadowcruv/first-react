@@ -1,54 +1,36 @@
 import React from "react"
+import reactImage from "../assets/react.svg"
 
 
 export default function MainChef(){
 
+  const [contact, setContact] = React.useState({
+    firstName: "John",
+    lastName: "Doe",
+    isFavorite: false
+  })
 
-  const [ingredientList, setIngredientList] = React.useState([])
+  function toggleFavourite(){
 
-  const [count, setCount] = React.useState(0)
-
-
-  const ingredients = ["Pepper", "CrayFish", "Maggi"]
-  
-
-  const ingredientsElement = ingredientList.map(ingredient => <li key={ingredient}>{ingredient}</li>)
-
-  //you can use this if you wanted to include return statement explicitly
-
-  // ingredientsElement = fruits.map((element) => {
-  //     return  <li>{element}</li>
-  //   }
-  // )
-
-  function handleSubmit(event){
-    event.preventDefault()
-    setCount(count => {
-
-      setIngredientList( prevList => {
-        console.log(count)
-        return [...prevList, ingredients[count]]
-      })
-      
-      
-      return count + 1
-
-    
+    setContact((prevContact) => {
+      return {...prevContact, 
+                isFavorite: !prevContact.isFavorite
+            }
     })
-    
   }
 
-  // function handleSubmit(event){
-  //   //to preventing reloading of the page when the button in the form is clicked
-  //   event.preventDefault()
-  //   //to get the text in the input box in the form
-  //   const formData = new FormData(event.currentTarget);
-  //   const newIngredient = formData.get("ingredient");
 
-  //   setIngredientList(prevList => [...prevList, newIngredient])
+  function handleSubmit(event){
+    //to preventing reloading of the page when the button in the form is clicked
+    event.preventDefault()
+    //to get the text in the input box in the form
+    const formData = new FormData(event.currentTarget);
+    const newIngredient = formData.get("ingredient");
 
-  //   console.log(newIngredient);
-  // }
+    setIngredientList(prevList => [...prevList, newIngredient])
+
+    console.log(newIngredient);
+  }
  
   return (
     <>
@@ -63,9 +45,20 @@ export default function MainChef(){
           />
           <button>Add ingredient</button>
         </form>
-        
+        <header className="chef-claude">
+              <img src={reactImage} className="chef-logo" 
+              alt="present icon"/>
+              <span>{contact.firstName} {contact.lastName}</span>
+        </header>
+        <button className="favoriteButton" onClick={toggleFavourite} aria-pressed={contact.isFavorite}
+                aria-label={contact.isFavorite ? "Remove from favorites" : "Add to favorites"} >
+
+        <img src={contact.isFavorite ? reactImage : null} className="chef-logo" 
+                alt={contact.isFavorite ? "filled star icon" : "empty star icon"}/>
+                
+        </button>
         <ul>
-          {ingredientsElement}
+          {/* {ingredientsElement} */}
         </ul>
       </section>
     </>

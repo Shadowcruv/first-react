@@ -13,10 +13,12 @@
 //   )
 // }
 
+import reactImage from "../assets/react.svg"
+
 export default function Header(){
   return (
     <header className="chef-claude">
-      <img src="src/assets/react.svg" className="chef-logo" />
+      <img src={reactImage} className="chef-logo" />
       <span>Chef Claude</span>
     </header>
   )
