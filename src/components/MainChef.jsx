@@ -3,12 +3,11 @@ import React from "react"
 
 export default function MainChef(){
 
+
+  const [ingredientList, setIngredientList] = React.useState([])
+
+
   const ingredients = ["Pepper", "CrayFish", "Maggi"]
-
-  const [ingredientList, setIngredientList] = React.useState([...ingredients])
-
-
-
   
 
   const ingredientsElement = ingredientList.map(ingredient => <li key={ingredient}>{ingredient}</li>)
