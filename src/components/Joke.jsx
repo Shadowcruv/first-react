@@ -37,7 +37,7 @@ export default function Joke(props){
       <p style={{ display: props.setup ? "block" : "none"}} className="setup">Setup: {props.setup}</p>
       {isShown && <p className="punchLine">
         Punchline: {props.punchline}</p>}
-      <button onClick={handleClick}>{isShown ? "Hide" : "Show"} PunchLine</button>
+      <button onClick={handleClick}>{!isShown ? "Show" : "Hide"} PunchLine</button>
       <hr />
     </>
     
