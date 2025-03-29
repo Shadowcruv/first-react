@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import Header from './components/Header'
 import Entry from './components/Entry'
 import Joke from './components/Joke'
+import jokes from './jokesData'
 import data from './data'
 import MainChef from './components/MainChef'
 import Form from './components/Form'
@@ -118,10 +119,18 @@ export default function App(){
             />
   })
 
+  const jokesComponentList = jokes.map((joke) => (
+    <Joke 
+      setup={joke.setup}
+      punchline={joke.punchline}
+    />
+  ))
+
   return (
     <>
       <Header />
-      <Form />
+      {/* <Form /> */}
+      {jokesComponentList}
       {/* <MainChef /> */}
     </>
     
