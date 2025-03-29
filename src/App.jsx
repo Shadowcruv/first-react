@@ -11,6 +11,7 @@ import jokes from './jokesData'
 import data from './data'
 import MainChef from './components/MainChef'
 import Form from './components/Form'
+import Chat from './components/Chat'
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -126,11 +127,17 @@ export default function App(){
     />
   ))
 
+  const [unreadMessages, setUnreadMessages] = useState(["2"])
+
+  const n = unreadMessages.length
+
+
   return (
     <>
       <Header />
+      <Chat count={n}/>
       {/* <Form /> */}
-      {jokesComponentList}
+      {/* {jokesComponentList} */}
       {/* <MainChef /> */}
     </>
     
