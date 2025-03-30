@@ -127,7 +127,7 @@ export default function App(){
     />
   ))
 
-  const [unreadMessages, setUnreadMessages] = useState(["2"])
+  const [unreadMessages, setUnreadMessages] = useState([])
 
   const n = unreadMessages.length
 
@@ -135,10 +135,10 @@ export default function App(){
   return (
     <>
       <Header />
-      <Chat count={n}/>
+      {/* <Chat count={n}/> */}
       {/* <Form /> */}
       {/* {jokesComponentList} */}
-      {/* <MainChef /> */}
+      <MainChef />
     </>
     
   )

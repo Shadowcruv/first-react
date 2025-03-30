@@ -79,7 +79,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1c4985;
+  background-color: #12151a;
   cursor: pointer;
   transition: border-color 0.25s;
   color: #ffffff;
@@ -118,10 +118,31 @@ button:focus-visible {
   width: 25px;
 }
 
+.recipe-box{
+  padding: 25px;
+  display: flex;
+  background-color: rgb(233, 209, 200);
+  align-items: center;
+  border-radius: 5px;
+}
+
+.recipe-button{
+  background-color: rgb(221, 86, 37);
+  border-radius: 5px;
+}
+
+#root{
+  padding: 20px;
+}
+
+.recipe{
+  flex-basis: 70%;
+}
 
 .nav-list{
   list-style: none;
   display: flex;
+  
 
 }
 
@@ -180,7 +201,6 @@ mainn {
 }
 
 .add-ingredient-form {
-  padding: 10px;
   display: flex;
   justify-content: center;
   gap: 10px;
