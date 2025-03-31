@@ -68,9 +68,9 @@ import App from './App.jsx'
 const root = createRoot(document.querySelector("#root"));
 
 root.render(
-    
+  
   // <Page />
-  <App />
+  <App darkMode={true}/>
   
 )
 

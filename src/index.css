@@ -126,6 +126,12 @@ button:focus-visible {
   border-radius: 5px;
 }
 
+.rating-button{
+  background: none;
+  border: none;
+  padding: 0
+}
+
 .recipe-button{
   background-color: rgb(221, 86, 37);
   border-radius: 5px;
@@ -305,8 +311,15 @@ h6{
   color: white;
 }
 
-.favoriteButton{
-  
+.disco-button-on, .disco-button-off{
+  height: 100px;
+  width: 100px;
+  margin:3px;
+  opacity: 1;
+}
+
+.disco-button-off{
+  opacity: 0.1;
 }
 
 

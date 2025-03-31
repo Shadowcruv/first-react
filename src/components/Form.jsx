@@ -1,5 +1,15 @@
+ import React from 'react'
+ import Star from './Star'
+ 
+
  export default function Form(){
 
+  const [isFavorite, setIsFavorite]= React.useState(true);
+
+  function handleClick(){
+    setIsFavorite(prevIsFavorite => !prevIsFavorite);
+    console.log(isFavorite)
+  }
   //use htmlFor for react, use For for javascript
   //the click as value is to change the value on the input button from the default Submit to Click  <input type="submit" value="Click" />
   
@@ -50,6 +60,7 @@
           <br />
         </fieldset>        
         <br />
+        <Star isFavorite={isFavorite} onClick={handleClick} />
 
         <fieldset>
           <legend>Dietary Restrictions</legend>

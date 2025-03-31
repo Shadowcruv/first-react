@@ -12,6 +12,8 @@ import data from './data'
 import MainChef from './components/MainChef'
 import Form from './components/Form'
 import Chat from './components/Chat'
+import pads from './pads'
+import Pad from './components/Pad'
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -54,7 +56,7 @@ import Chat from './components/Chat'
 // }
 
 //for travel journal(Entry.jsx)
-export default function App(){
+export default function App({darkMode}){
 
   function handleClick(){
     console.log("I was clicked")
@@ -131,15 +133,46 @@ export default function App(){
 
   const n = unreadMessages.length
 
+  const [padList, setPadList] = useState(pads)
+
+
+
+  const styles = {
+    backgroundColor: darkMode ? "#222222" : "#ffffff",
+    display: "grid",
+    gridTemplateRows: "1fr 1fr 1fr  1fr",
+    gridTemplateColumns: "1fr 1fr 1fr 1fr",
+    gap: "2px",
+    justifyItems: "center",
+    alignItems: "center"
+  }
+
+  const padElementList = padList.map(pad => {
+    // console.log(pad.on);
+    return <Pad className= {pad.on ? "disco-button-on": "disco-button-off"} id={pad.id} key={pad.id} color={pad.color} on={pad.on} />
+
+  }
+  
+  )
+  
+  const design = {backgroundColor: "red"}
+ 
+  function toggleAll(){
+    setPadList(prevPadList => prevPadList.map(item => ({...item, on: false})))
+  }
+
+  console.log(padList)
 
   return (
-    <>
-      <Header />
+    <div style={styles}>
+      {padElementList}
+      <button onClick={toggleAll} style={design}>Switch Off</button>
+      {/* <Header /> */}
       {/* <Chat count={n}/> */}
       {/* <Form /> */}
       {/* {jokesComponentList} */}
-      <MainChef />
-    </>
+      {/* <MainChef /> */}
+    </div>
     
   )
 }
