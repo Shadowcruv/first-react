@@ -149,11 +149,11 @@ export default function App({darkMode}){
 
   const padElementList = padList.map(pad => {
     // console.log(pad.on);
-    return <Pad className= {pad.on ? "disco-button-on": "disco-button-off"} id={pad.id} key={pad.id} color={pad.color} on={pad.on} />
+    return <Pad className= {pad.on ? "disco-button-on": "disco-button-off"} id={pad.id} key={pad.id} color={pad.color} on={pad.on} method={toggle} />
 
   }
-  
   )
+
   
   const design = {backgroundColor: "red"}
  
@@ -161,7 +161,12 @@ export default function App({darkMode}){
     setPadList(prevPadList => prevPadList.map(item => ({...item, on: false})))
   }
 
-  console.log(padList)
+  function toggle(id){
+
+    setPadList(prevPadList => prevPadList.map(item => item.id === id ? {...item, on: !item.on} : item))
+  }
+
+  // console.log(padList)
 
   return (
     <div style={styles}>

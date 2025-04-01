@@ -2,24 +2,23 @@ import React from 'react'
 
 export default function Pad(props) {
 
-  const [isOn, setIsOn] = React.useState(props.on)
-  function toggleOff(){
-      setIsOn(prevIsOn => {
-        console.log(prevIsOn)
-        return !prevIsOn
-        }
-      )
-  }
+  // console.log(props.method)
 
-  console.log(props.on)
+  let id = props.id
+  function execute(){
+    props.method(id)
+  }
+  
+
+  // console.log(props.on)
 
   return (
     <button className={props.className} id={props.id} style={{
         backgroundColor: props.color,
-        opacity: isOn ? 1 : 0.1
+        opacity: props.on ? 1 : 0.1
       }}
 
-      onClick={toggleOff}
+      onClick={execute}
     >
     </button>
   )
