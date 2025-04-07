@@ -70,7 +70,7 @@ const root = createRoot(document.querySelector("#root"));
 root.render(
   
   // <Page />
-  <App darkMode={true}/>
+  <App/>
   
 )
 

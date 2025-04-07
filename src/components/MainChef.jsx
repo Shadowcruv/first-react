@@ -1,10 +1,15 @@
 import React from "react"
 import reactImage from "../assets/react.svg"
+import ListIngredient from "./ListIngredient";
+import AIResponse from "./AIResponse";
+import getRecipeFromMistral from "../ai"
 
 
 export default function MainChef(){
 
   const [ingredientList, setIngredientList] = React.useState([])
+
+  const [theResponse, setTheResponse] = React.useState("");
 
   function toggleFavourite(){
 
@@ -15,6 +20,7 @@ export default function MainChef(){
     })
   }
 
+  const key = ""
 
   function handleSubmit(formData){
     const newIngredient = formData.get("ingredient");
@@ -22,9 +28,16 @@ export default function MainChef(){
     setIngredientList(prevList => [...prevList, newIngredient])
 
     console.log(newIngredient);
+    
   }
 
   const ingredientsElement = ingredientList.map(ingredient => <li key={ingredient}>{ingredient}</li>)
+
+  function getRecipe(){
+    const response = getRecipeFromMistral(ingredientList);
+    console.log(response)
+    setTheResponse(response);
+  }
  
   return (
     <>
@@ -40,19 +53,9 @@ export default function MainChef(){
           <button>Add ingredient</button>
         </form>
       </section>
-      {ingredientsElement.length > 0 && <section>
-        <h2>Ingredients on hand</h2>
-        <ul>
-          {ingredientsElement}
-        </ul>
-        {ingredientsElement.length > 4 && <section className="recipe-box"> 
-          <div className="recipe">
-            <h3>Ready for a recipe?</h3>
-            <p>Generate a recipe from your list of ingredients.</p>
-          </div>
-            <button className="recipe-button"> Get a recipe</button>
-        </section>}
-      </section>}
+      <ListIngredient length={ingredientList.length} list={ingredientsElement} getRecipe={getRecipe} />
+      <AIResponse theResponse={theResponse}/>
+        
     </>
   )
 }

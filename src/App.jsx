@@ -14,6 +14,8 @@ import Form from './components/Form'
 import Chat from './components/Chat'
 import pads from './pads'
 import Pad from './components/Pad'
+import ListIngredient from './components/ListIngredient'
+import Meme from './components/Meme'
 
 // function App() {
 //   const [count, setCount] = useState(0)
@@ -169,14 +171,15 @@ export default function App({darkMode}){
   // console.log(padList)
 
   return (
-    <div style={styles}>
-      {padElementList}
-      <button onClick={toggleAll} style={design}>Switch Off</button>
+    <div>
+      {/* {padElementList}
+      <button onClick={toggleAll} style={design}>Switch Off</button> */}
       {/* <Header /> */}
       {/* <Chat count={n}/> */}
       {/* <Form /> */}
       {/* {jokesComponentList} */}
       {/* <MainChef /> */}
+      <Meme />
     </div>
     
   )

@@ -322,4 +322,36 @@ h6{
   opacity: 0.1;
 }
 
+.meme-head{
+  display: flex;
+  align-items: center;
+  gap: 5px
+}
+
+.inside-form{
+  display: flex;
+  gap: 30px
+}
+
+.inside-form label{
+  display: block;
+  margin-bottom: 5px;
+}
+
+input{
+  width: 230px
+}
+
+form{
+  
+}
+
+.meme-main button{
+  margin-top: 20px;
+  width: 100%;
+}
+
+.meme-main{
+  padding: 20px;
+}
 
